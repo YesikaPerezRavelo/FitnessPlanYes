@@ -6,13 +6,13 @@ body {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  background-color: whitesmoke;
-  border-radius: 4px;
+  background-color: rgb(153, 148, 148);
+  border-radius: 8px;
   font-size: 12px;
 }
 
 #form h1 {
-  color: #0f2027;
+  color: black;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-size: large;
@@ -25,12 +25,13 @@ body {
   color: white;
   background-color: rgb(41, 57, 194);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .input-control {
   display: flex;
   flex-direction: column;
+  font-size: medium;
 }
 
 .input-control input {
@@ -40,6 +41,7 @@ body {
   font-size: 12px;
   padding: 10px;
   width: 100%;
+  border-radius: 8px;
 }
 
 .input-control input:focus {
@@ -47,7 +49,7 @@ body {
 }
 
 .input-control.success input {
-  border-color: grey;
+  border-color: rgb(109, 108, 108);
 }
 
 .input-control.error input {
