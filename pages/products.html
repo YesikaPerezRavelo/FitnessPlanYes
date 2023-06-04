@@ -53,11 +53,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link px-3" href="../index.html">Inicio</a>
+                  <a class="nav-link px-3" href="../index.html">Registro</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link px-3" href=".pages/login.html">Login</a>
+                  <a class="nav-link px-3" href="../pages/login.html">Login</a>
                 </li>
 
                 <li class="nav-item">
@@ -69,7 +69,7 @@
                     >Productos</a>
                 </li>
                 
-                
+            
             
                 <li class="nav-item">
                   <a class="nav-link px-3" href="../pages/contact.html">Contacto</a>
@@ -79,25 +79,26 @@
         </nav>
       </header>
   
-<!-- Calendar -->
-
-<div id = "container text-center">
-    <div id="header"></div>
-
-<div id="weekdays">
-<div>Domingo</div>
-<div>Lunes</div>
-<div>Martes</div>
-<div>Miercoles</div>
-<div>Viernes</div>
-<div>Sábado</div>
-<div>Domingo</div>
-
+<!-- Productos -->
+<div class="container">
+<div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p>
 </div>
+   </div>  
 
-    <div id="calendar"></div>
-</div>
-     
+   <div class="container">
+    <div id = "root"></div>
+    <div class="sidebar">
+      <div class="head"><p>Mi carrito</p></div>
+      <div id="cartItem">Tu carrito esta vacio</div>
+      <div class="foot">
+<h2>Total</h2>
+<h3 id="total"> 0.00</h3>
+
+      </div>
+
+    </div>
+
+   </div>
 
 <!-- Footer -->
  
@@ -125,7 +126,7 @@
 <!-- Footer End-->
 
 <!-- JS -->
-<script src="../js/appointment.js"></script>
+<script src="../js/products.js"></script>
 
     <!-- Bootstrap -->
     <script

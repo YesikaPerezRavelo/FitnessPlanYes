@@ -8,9 +8,6 @@ class User {
   }
 }
 
-let button = document.getElementById("sendInfo");
-button.addEventListener("click", validateInputs);
-
 function userInfo() {
   const form = document.getElementById("form");
   const username = document.getElementById("username");
@@ -18,12 +15,6 @@ function userInfo() {
   const password = document.getElementById("password");
   const password2 = document.getElementById("password2");
 }
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   validateInputs();
-// });
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
