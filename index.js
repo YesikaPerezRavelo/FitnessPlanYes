@@ -1,20 +1,15 @@
-class User {
-  constructor(form, username, email, password, password2) {
-    this.form = form;
-    this.username = username;
-    this.email = email;
-    this.password = password;
-    this.password2 = password2;
-  }
-}
+form.addEventListener("submit", (e) => {
+  let form = document.getElementById("form").value;
+  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+  let password2 = document.getElementById("password2").value;
 
-function userInfo() {
-  const form = document.getElementById("form");
-  const username = document.getElementById("username");
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  const password2 = document.getElementById("password2");
-}
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
+
+  alert("Tu información ha sido guardada");
+});
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
@@ -74,13 +69,5 @@ const validateInputs = () => {
     setError(password2, "Passwords doesn't match");
   } else {
     setSuccess(password2);
-  }
-
-  function showUSer(User) {
-    let newInfo = document.createElement("div");
-    newInfo.innerHTML = `Gracias  ${User.username} ! sus datos fueron registrados`;
-
-    newInfo.className = "info-user";
-    document.body.appendChild(newInfo);
   }
 };

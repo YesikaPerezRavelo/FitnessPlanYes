@@ -1,25 +1,25 @@
 const product = [
   {
     id: 0,
-    Image: "img/logo.webp",
+    Image: "../img/books.jpg",
     title: "Abdomen de hierro",
     price: 8000,
   },
   {
     id: 1,
-    Image: "img/logo.webp",
+    Image: "../img/books.jpg",
     title: "Tren superior para la postura",
     price: 9000,
   },
   {
     id: 2,
-    Image: "img/logo.webp",
+    Image: "../img/books.jpg",
     title: "Mas de 100 entrenamientos para hacer desde casa",
     price: 1000,
   },
   {
     id: 3,
-    Image: "img/logo.webp",
+    Image: "../img/books.jpg",
     title:
       "Los mejores entrenamientos para armar una linda cola y piernas sexy",
     price: 9000,

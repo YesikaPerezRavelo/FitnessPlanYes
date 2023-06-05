@@ -1,32 +1,48 @@
-class Cliente {
-  constructor(nombre, telefono, direccion) {
-    this.nombre = nombre;
-    this.telefono = telefono;
-    this.direccion = direccion;
+function userFormInfo() {
+  const email = document.getElementById("email");
+}
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = message;
+  inputControl.classList.add("error");
+  inputControl.classList.remove("success");
+};
+
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = "";
+  inputControl.classList.add("success");
+  inputControl.classList.remove("error");
+};
+
+const isValidEmail = (email) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+};
+
+const validateInputs = () => {
+  const emailValue = email.value.trim();
+
+  if (emailValue === "") {
+    setError(email, "Se requiere un email");
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, "Por favor escribir un email");
+  } else {
+    setSuccess(email);
   }
+};
+
+let popup = document.getElementById("popup");
+function openPopup() {
+  popup.classList.add("open-popup");
 }
 
-let boton = document.getElementById("enviarInfo");
-boton.addEventListener("click", cargarCliente);
-
-// capturar elementos
-function cargarCliente() {
-  let nombre = document.getElementById("name").value;
-  let telefono = document.getElementById("phone").value;
-  let direccion = document.getElementById("adress").value;
-  let cliente1 = new Cliente(nombre, telefono, direccion);
-  console.log(cliente1);
-  mostrarCliente(cliente1);
-}
-//eliminar elementos
-function mostrarCliente(cliente) {
-  let formulario = document.getElementById("customer");
-  formulario.innerHTML = "";
-  //agregar elementos
-  let nuevoContenido = document.createElement("div");
-  nuevoContenido.innerHTML = `<h1> Gracias  ${cliente.nombre} ! sus datos fueron registrados y en breve
-    recibira su pedido en ${cliente.direccion}</h1>`;
-
-  nuevoContenido.className = "info-cliente";
-  formulario.appendChild(nuevoContenido);
+function closePopup() {
+  popup.classList.remove("open-popup");
 }
