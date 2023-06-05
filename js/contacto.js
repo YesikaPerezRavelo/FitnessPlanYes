@@ -1,48 +1,17 @@
-function userFormInfo() {
-  const email = document.getElementById("email");
-}
+form.addEventListener("submit", (e) => {
+  let form = document.getElementById("form").value;
+  let email = document.getElementById("email").value;
+  let msg = document.getElementById("msg").value;
 
-const setError = (element, message) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
+  localStorage.setItem("email", email);
+  localStorage.setItem("msg", msg);
 
-  errorDisplay.innerText = message;
-  inputControl.classList.add("error");
-  inputControl.classList.remove("success");
-};
-
-const setSuccess = (element) => {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = "";
-  inputControl.classList.add("success");
-  inputControl.classList.remove("error");
-};
-
-const isValidEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-};
-
-const validateInputs = () => {
-  const emailValue = email.value.trim();
-
-  if (emailValue === "") {
-    setError(email, "Se requiere un email");
-  } else if (!isValidEmail(emailValue)) {
-    setError(email, "Por favor escribir un email");
+  if (Name.value === "" || email.value === "" || msg.value === "") {
+    alert("Falta información");
   } else {
-    setSuccess(email);
+    email.value = "";
+    msg.value = "";
   }
-};
 
-let popup = document.getElementById("popup");
-function openPopup() {
-  popup.classList.add("open-popup");
-}
-
-function closePopup() {
-  popup.classList.remove("open-popup");
-}
+  alert("Tu mensaje ha sido enviado");
+});
