@@ -81,10 +81,10 @@ function displayCart(a) {
         total = total + price;
         document.getElementById("total").innerHTML = "" + total + ".00";
         return (
-          `< class='cart-item'>
-                <div class='img/logo.webp'> 
+          `
+                <div class='row-img'> 
                 <img class= 'rowimg' src=${Image}>
-                </div>
+                
                 <p style='font-size:12px'>${title}</p> 
                 <h2 style='font-size:15px'>${price}.00</h2>` +
           "<i class = 'fa-solid fa-trash' onclick= 'delElement (" +
