@@ -91,22 +91,21 @@ body {
 }
 
 #root {
-  width: 50%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  display: flex;
+  padding-top: 2rem;
 }
 
 .sidebar {
   width: 100%;
   border-radius: 5px;
-  background-color: rgb(209, 146, 146);
   padding: 15px;
   text-align: center;
+  padding-top: 2rem;
 }
 .head {
-  background-color: white;
+  background-color: rgb(226, 222, 222);
   border-radius: 3px;
   height: 40px;
   padding: 10px;
@@ -165,6 +164,17 @@ h2 {
   font-weight: 400;
 }
 
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 25rem;
+}
+
 button:hover {
   background-color: #ff3860;
 }
@@ -184,16 +194,12 @@ button:hover {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .rowimg {
   max-width: 43px;
   max-height: 43px;
-  border-radius: 50%;
 }
 
 .fa-trash:hover {

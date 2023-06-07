@@ -5,6 +5,8 @@ let events = localStorage.getItem("events")
   : [];
 
 const calendar = document.getElementById("calendar");
+const newEventModal = document.getElementById("NewEventModal");
+const backDrop = document.getElementById("ModalBackDrop");
 const weekdays = [
   "Domingo",
   "Lunes",
@@ -15,8 +17,26 @@ const weekdays = [
   "Sábado",
 ];
 
+function openModal(date) {
+  clicked = date;
+
+  const eventForDay = events.find((e) => e.date === clicked);
+
+  if (eventForDay) {
+    console.log("Ya esta agendado");
+  } else {
+    newEventModal.style.display = "block";
+  }
+
+  backDrop.style.display = "block";
+}
+
 function load() {
   const dt = new Date();
+
+  if (nav !== 0) {
+    dt.setMonth(new Date().getMonth() + nav);
+  }
 
   const day = dt.getDate();
   const month = dt.getMonth();
@@ -33,7 +53,14 @@ function load() {
 
   const paddingDays = weekdays.indexOf(dateString.split(",")[0]);
 
-  for (let i = 1; i <= paddingDays + daysInMonth; i++) {
+  document.getElementById("monthDisplay").innerText = ` ${dt.toLocaleDateString(
+    "es-us",
+    { month: "long" }
+  )} ${year}`;
+
+  calendar.innerHTML = "";
+
+  for (let i = 0; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement("div");
     daySquare.classList.add("day");
 
@@ -49,4 +76,17 @@ function load() {
   }
 }
 
+function initButtons() {
+  document.getElementById("nextButton").addEventListener("click", () => {
+    nav++;
+    load();
+  });
+
+  document.getElementById("backButton").addEventListener("click", () => {
+    nav--;
+    load();
+  });
+}
+
+initButtons();
 load();

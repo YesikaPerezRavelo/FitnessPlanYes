@@ -1,27 +1,26 @@
 const product = [
   {
     id: 0,
-    Image: "../img/books.jpg",
-    title: "Abdomen de hierro",
+    Image: "../img/abs.jpg",
+    title: "Abdominales",
     price: 8000,
   },
   {
     id: 1,
-    Image: "../img/books.jpg",
-    title: "Tren superior para la postura",
+    Image: "../img/upper.jpg",
+    title: "Tren superior",
     price: 9000,
   },
   {
     id: 2,
-    Image: "../img/books.jpg",
-    title: "Mas de 100 entrenamientos para hacer desde casa",
+    Image: "../img/home.jpg",
+    title: "Entrena en casa",
     price: 1000,
   },
   {
     id: 3,
-    Image: "../img/books.jpg",
-    title:
-      "Los mejores entrenamientos para armar una linda cola y piernas sexy",
+    Image: "../img/sexy.jpg",
+    title: "Cola y piernas",
     price: 9000,
   },
 ];
@@ -44,7 +43,7 @@ document.getElementById("root").innerHTML = categories
     <img class='images' src=${Image}></img>
     </div>
     <div class='bottom'>
-    <p>${title}</p>
+    <h4>${title}</h4>
     <h2>${price}.00</h2>` +
       "<button onclick='addtocart(" +
       i++ +

@@ -78,7 +78,13 @@
 <!-- Calendar -->
 <div class="container">
 <div id = "container">
-    <div id="header"></div>
+    <div id="header">
+      <div id="monthDisplay"></div>
+      <div>
+        <button id="backButton">Back</button>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
 
 <div id="weekdays">
 <div>Domingo</div>
@@ -93,6 +99,18 @@
 
     <div id="calendar"></div>
 </div>
+
+<div id="newEventModal">
+  <h2>New Event</h2>
+
+  <input id="eventTitleInput" placeholder="Event Title"/>
+
+  <button id="saveButton">Save</button>
+  <button id="cancelButon">Cancel</button>
+
+</div>
+
+<div id="modalBackDrop"></div>
      </div>
 
 <!-- Footer -->
