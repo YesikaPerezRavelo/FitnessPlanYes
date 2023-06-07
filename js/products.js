@@ -2,13 +2,13 @@ const product = [
   {
     id: 0,
     Image: "../img/abs.jpg",
-    title: "Abdominales",
+    title: "Abs de hierro",
     price: 8000,
   },
   {
     id: 1,
     Image: "../img/upper.jpg",
-    title: "Tren superior",
+    title: "Brazos",
     price: 9000,
   },
   {
@@ -43,7 +43,7 @@ document.getElementById("root").innerHTML = categories
     <img class='images' src=${Image}></img>
     </div>
     <div class='bottom'>
-    <h4>${title}</h4>
+    <p>${title}</p>
     <h2>${price}.00</h2>` +
       "<button onclick='addtocart(" +
       i++ +
