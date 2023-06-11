@@ -6,7 +6,7 @@ body {
   width: 300px;
   margin: 20vh auto 0 auto;
   padding: 20px;
-  background-color: rgb(153, 148, 148);
+  background-color: white;
   border-radius: 8px;
   font-size: 12px;
 }
@@ -28,6 +28,10 @@ body {
   border-radius: 8px;
 }
 
+#form button:hover {
+  background-color: rgb(238, 41, 162);
+}
+
 .input-control {
   display: flex;
   flex-direction: column;
@@ -35,7 +39,7 @@ body {
 }
 
 .input-control input {
-  border: 2px solid #f0f0f0;
+  border: 2px solid #dfd8d8;
   border-radius: 4px;
   display: block;
   font-size: 12px;
@@ -107,7 +111,7 @@ body {
   padding-top: 2rem;
 }
 .head {
-  background-color: rgb(226, 222, 222);
+  background-color: none;
   border-radius: 3px;
   height: 40px;
   padding: 10px;
@@ -209,29 +213,75 @@ button:hover {
 /* Calendar */
 
 button {
+  padding: 10px;
+  margin-top: 10px;
   width: 100%;
-  cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
+  color: white;
+  background-color: rgb(41, 57, 194);
   border: none;
-  outline: none;
-  border-radius: 5px;
-  color: black;
+  border-radius: 8px;
 }
 
 #header {
   padding: 10px;
-  color: #d36c6c;
+  color: rgb(238, 41, 162);
   font-size: 26px;
   font-family: sans-serif;
   display: flex;
   justify-content: space-between;
 }
 #header button {
-  background-color: #92a1d1;
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  color: white;
+  background-color: rgb(41, 57, 194);
+  border: none;
+  border-radius: 8px;
+  font-size: medium;
 }
+
+#header button:hover {
+  background-color: rgb(238, 41, 162);
+}
+
 #container {
   width: 770px;
+  margin-left: 20%;
 }
+
+@media (max-width: 700px) {
+  #weekdays {
+    width: 40%;
+    font-size: medium;
+    justify-content: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #weekdays {
+    width: 20%;
+    font-size: small;
+    justify-content: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #weekdays {
+    width: 40%;
+    font-size: medium;
+    justify-content: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #weekdays {
+    width: 20%;
+    font-size: small;
+    justify-content: none;
+  }
+}
+
 #weekdays {
   width: 100%;
   display: flex;
@@ -248,6 +298,7 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
+
 .day {
   width: 100px;
   padding: 10px;
