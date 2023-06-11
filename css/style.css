@@ -2,6 +2,14 @@ body {
   background: none;
 }
 
+#intro-section {
+  background-image: url(../img/1.jpg);
+  background-position: center;
+  border: 20rem;
+  background-size: 90%;
+  padding: 7rem 0rem 10rem 0rem;
+}
+
 #form {
   width: 300px;
   margin: 20vh auto 0 auto;
@@ -167,6 +175,7 @@ body {
 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  font-size: large;
 }
 
 button:hover {
@@ -379,4 +388,109 @@ button {
   height: 100vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contacto */
+
+.name {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+.name i {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: black;
+}
+.name input {
+  width: 100%;
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.name input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.email {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+.email i {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: black;
+}
+.email input {
+  width: 100%;
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 40px;
+}
+.email input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.message-box {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+.message-box i {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: black;
+}
+.message-box textarea {
+  width: 100%;
+  padding: 20px 60px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 40px;
+}
+.message-box textarea::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.message {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+.message .success {
+  font-size: 20px;
+  color: green;
+  position: absolute;
+  animation: buttons 0.3s linear;
+  display: none;
+}
+.message .danger {
+  font-size: 20px;
+  color: red;
+  position: absolute;
+  transition: 0.3s;
+  animation: buttons 0.3s linear;
+  display: none;
 }

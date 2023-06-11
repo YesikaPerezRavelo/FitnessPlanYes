@@ -1,17 +1,24 @@
-form.addEventListener("submit", (e) => {
-  let form = document.getElementById("form").value;
-  let email = document.getElementById("email").value;
-  let msg = document.getElementById("msg").value;
-
-  localStorage.setItem("email", email);
-  localStorage.setItem("msg", msg);
+function message() {
+  var Name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var msg = document.getElementById("msg");
+  const success = document.getElementById("success");
+  const danger = document.getElementById("danger");
 
   if (Name.value === "" || email.value === "" || msg.value === "") {
-    alert("Falta información");
+    danger.style.display = "block";
   } else {
-    email.value = "";
-    msg.value = "";
+    setTimeout(() => {
+      Name.value = "";
+      email.value = "";
+      msg.value = "";
+    }, 2000);
+
+    success.style.display = "block";
   }
 
-  alert("Tu mensaje ha sido enviado");
-});
+  setTimeout(() => {
+    danger.style.display = "none";
+    success.style.display = "none";
+  }, 4000);
+}

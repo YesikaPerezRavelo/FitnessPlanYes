@@ -26,7 +26,8 @@
           rel="stylesheet"
         />
 
-
+<!-- toastify -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <title>FitnessPlanYes</title>
   </head>
@@ -78,20 +79,40 @@
       </header>
   
 <!-- contact form -->
-<div class="container" id="form">
-  <h1>Dejanos tu mensaje</h1>
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
-  <input type="email" class="form-control" id="email" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label danger">Mensaje</label>
-  <textarea class="form-control" id="msg" rows="3"></textarea>
-</div>
-<button type="submit" class="btn">Enviar</button>
-            
+<section id="intro-section">
+<div class="container">
+  
+  <div class="box">
+      <h2>Envianos un mensaje</h2>
+      <div class="input-control">
+      <div class="name">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Nombre" id="name">
+      </div>
+      </div>
+      <div class="input-control">
+      <div class="email">
+          <i class="fas fa-envelope"></i>
+          <input type="text" placeholder="Email" id="email">
+      </div>
+    </div>
+    <div class="input-control">
+      <div class="message-box">
+          <textarea id="msg" cols="20" rows="10" placeholder="Mensaje"></textarea>
+      </div>
+    </div>
+      <div class="button">
+          <button id="send" onclick="message()">Enviar mensaje</button>
+      </div>
+      <div class="message">
+          <div class="success" id="success">Tu mensaje ha sido enviado</div>
+          <div class="danger" id="danger">Falta información</div>
+      </div>
+  </div>
+
 </div>
 
+</section>
 <!-- Footer -->
  
   <!-- Copyright -->
@@ -119,6 +140,9 @@
 
 <!-- JS -->
 <script src="../js/contacto.js"></script>
+
+<!-- Toastify -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <!-- Bootstrap -->
     <script

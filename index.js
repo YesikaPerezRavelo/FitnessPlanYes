@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("username", username);
   localStorage.setItem("password", password);
 
-  alert("Tu información ha sido guardada");
+  Swal.fire("Tu información ha sido enviada");
 });
 
 const setError = (element, message) => {
