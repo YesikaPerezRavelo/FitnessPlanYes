@@ -5,9 +5,26 @@ body {
 #intro-section {
   background-image: url(../img/1.jpg);
   background-position: center;
+  background-repeat: no-repeat;
   border: 20rem;
   background-size: 90%;
   padding: 7rem 0rem 10rem 0rem;
+}
+
+@media (max-width: 700px) {
+  #intro-section {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+@media (max-width: 500px) {
+  #intro-section {
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 }
 
 #form {
@@ -313,7 +330,7 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: white;
+  background-color: #e8faed;
   margin: 5px;
   box-shadow: 0px 0px 3px #cbd4c2;
   display: flex;
@@ -321,11 +338,11 @@ button {
   justify-content: space-between;
 }
 .day:hover {
-  background-color: #e8faed;
+  background-color: rgb(135, 174, 247);
 }
 
 .day + #currentDay {
-  background-color: #e8f4fa;
+  background-color: #f7bce8;
 }
 .event {
   font-size: 10px;
@@ -393,34 +410,27 @@ button {
 /* Contacto */
 
 .name {
-  width: 100%;
+  width: 120%;
   position: relative;
   margin-bottom: 15px;
 }
-.name i {
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: black;
-}
+
 .name input {
+  border: 2px solid #dfd8d8;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
   width: 100%;
-  padding: 20px 60px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: white;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 
 .name input::placeholder {
-  color: black;
+  color: grey;
   font-weight: 500;
 }
 .email {
-  width: 100%;
+  width: 120%;
   position: relative;
   margin-bottom: 15px;
 }
@@ -433,42 +443,36 @@ button {
   color: black;
 }
 .email input {
+  border: 2px solid #dfd8d8;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
   width: 100%;
-  padding: 20px 60px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: white;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .email input::placeholder {
-  color: black;
+  color: grey;
   font-weight: 500;
 }
 .message-box {
   width: 100%;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  margin-left: 1rem;
 }
-.message-box i {
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: black;
-}
+
 .message-box textarea {
+  border: 2px solid #dfd8d8;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
   width: 100%;
-  padding: 20px 60px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: white;
-  border-radius: 40px;
+  border-radius: 8px;
 }
 .message-box textarea::placeholder {
-  color: black;
+  color: gray;
   font-weight: 500;
 }
 
