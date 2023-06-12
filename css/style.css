@@ -330,9 +330,9 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #e8faed;
+  background-color: #a7b5f1;
   margin: 5px;
-  box-shadow: 0px 0px 3px #cbd4c2;
+  box-shadow: 0px 0px 3px #54658b;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -342,7 +342,7 @@ button {
 }
 
 .day + #currentDay {
-  background-color: #f7bce8;
+  background-color: #f8afe6;
 }
 .event {
   font-size: 10px;
