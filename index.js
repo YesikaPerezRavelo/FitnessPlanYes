@@ -1,4 +1,6 @@
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   let form = document.getElementById("form").value;
   let username = document.getElementById("username").value;
   let email = document.getElementById("email").value;
