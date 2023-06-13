@@ -57,7 +57,7 @@ function load() {
   const paddingDays = weekdays.indexOf(dateString.split(", ")[0]);
 
   document.getElementById("monthDisplay").innerText = `${dt.toLocaleDateString(
-    "en-us",
+    "es-us",
     { month: "long" }
   )} ${year}`;
 
