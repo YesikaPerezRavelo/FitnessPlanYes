@@ -6,13 +6,11 @@ function message() {
   const danger = document.getElementById("danger");
 
   if (Name.value === "" || email.value === "" || msg.value === "") {
-    alert = () => {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Falta información",
-      });
-    };
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Falta información",
+    });
   } else {
     setTimeout(() => {
       Name.value = "";
@@ -20,13 +18,11 @@ function message() {
       msg.value = "";
     }, 2000);
 
-    alert = () => {
-      Swal.fire(
-        "Buena decision!",
-        "Has añadido este producto a tu carrito!",
-        "success"
-      );
-    };
+    Swal.fire(
+      "Buena decision!",
+      "Has añadido este producto a tu carrito!",
+      "success"
+    );
   }
 
   setTimeout(() => {
