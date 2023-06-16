@@ -81,11 +81,11 @@ function displayCart(a) {
         document.getElementById("total").innerHTML = "" + total + ".00";
         return (
           `
-                <div class='row-img'> 
+                <div class='d-flex justify-content-between'> 
                 <img class= 'rowimg' src=${Image}>
                 
-                <p style='font-size:12px'> ${title}</p> 
-                <h2 style='font-size:15px'>${price}.00</h2>` +
+                <p style='font-size:20px'> ${title}</p> 
+                <h2 style='font-size:20px'>${price}.00</h2>` +
           "<i class = 'fa-solid fa-trash' onclick= 'delElement (" +
           j++ +
           ")'></i></div>"
