@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
 
-    if (Name.value === "" || email.value === "" || msg.value === "") {
+    if (registro.value === "") {
       Swal.fire("Informacion incorrecta");
     } else {
       setTimeout(() => {
@@ -29,33 +29,35 @@ form.addEventListener("submit", (e) => {
     }, 4000);
   }
 });
+registro();
+{
+  const isValidEmail = (email) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
 
-const isValidEmail = (email) => {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-};
+  const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
 
-const validateInputs = () => {
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
+    if (
+      usernameValue.trim() === "" ||
+      email.value.trim() ||
+      password.value.trim() ||
+      password2.value.trim()
+    ) {
+      setError(Swal.fire("Falta información"));
+    } else {
+      setSuccess(Swal.fire("se ha agregado informacion"));
+    }
 
-  if (
-    usernameValue.trim() === "" ||
-    email.value.trim() ||
-    password.value.trim() ||
-    password2.value.trim()
-  ) {
-    setError(Swal.fire("Falta información"));
-  } else {
-    setSuccess(Swal.fire("se ha agregado informacion"));
-  }
-
-  if (password2Value !== passwordValue) {
-    setError(Swal.fire("Falta información"));
-  } else {
-    setSuccess(Swal.fire("se ha agregado informacion"));
-  }
-};
+    if (password2Value !== passwordValue) {
+      setError(Swal.fire("Falta información"));
+    } else {
+      setSuccess(Swal.fire("se ha agregado informacion"));
+    }
+  };
+}
