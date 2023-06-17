@@ -17,11 +17,7 @@ form.addEventListener("submit", (e) => {
     localStorage.setItem("password", password);
 
     if (Name.value === "" || email.value === "" || msg.value === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Falta información",
-      });
+      Swal.fire("Informacion incorrecta");
     } else {
       setTimeout(() => {
         Name.value = "";
@@ -29,11 +25,7 @@ form.addEventListener("submit", (e) => {
         msg.value = "";
       }, 2000);
 
-      Swal.fire(
-        "Buena decision!",
-        "Has añadido este producto a tu carrito!",
-        "success"
-      );
+      Swal.fire("Se envio tu informaciónm");
     }
 
     setTimeout(() => {
