@@ -59,11 +59,21 @@ var cart = [];
 function addtocart(a) {
   cart.push({ ...categories[a] });
   displayCart();
+  Swal.fire(
+    "Buena decision!",
+    "Has añadido este producto a tu carrito!",
+    "success"
+  );
 }
 
 function delElement(a) {
   cart.splice(a, 1);
   displayCart();
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Something went wrong!",
+  });
 }
 
 function displayCart(a) {

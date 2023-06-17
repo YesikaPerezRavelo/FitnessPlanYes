@@ -111,6 +111,7 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
+    Swal.fire("Buena decision!", "Perfecto", "success");
 
     localStorage.setItem("events", JSON.stringify(events));
     closeModal();
@@ -121,6 +122,11 @@ function saveEvent() {
 
 function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "Something went wrong!",
+  });
   localStorage.setItem("events", JSON.stringify(events));
   closeModal();
 }
