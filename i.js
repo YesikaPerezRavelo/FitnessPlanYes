@@ -220,3 +220,16 @@ const validateInputs = () => {
     setSuccess(password2);
   }
 };
+
+
+function registro() {
+  let repeatPassword = prompt("Confirma la contraseña");
+  if (newPassword === repeatPassword) {
+    alert("Contraseña correcta");
+  } else {
+    alert("Contraseña incorrecta");
+    registro();
+  }
+}
+
+registro();

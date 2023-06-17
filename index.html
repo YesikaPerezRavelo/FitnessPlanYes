@@ -98,7 +98,11 @@
                 <input id="password2"placeholder="password" type="password">
                 <div class="error"></div>
             </div>
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" id="send" onclick="registro()" class="btn">Enviar</button>
+            <div class="message">
+              <div class="setSuccess" id="setSuccess"></div>
+              <div class="setError" id="setError"></div>
+            </div>
         </form>
     </div>
 </section>
