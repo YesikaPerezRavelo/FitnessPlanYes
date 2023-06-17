@@ -13,7 +13,11 @@ function registro() {
     password.value === "" ||
     password2 === ""
   ) {
-    Swal.fire("Informacion incorrecta");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Falta información",
+    });
   } else {
     setTimeout(() => {
       username.value = "";
@@ -21,7 +25,7 @@ function registro() {
       password.value = "";
     }, 2000);
 
-    Swal.fire("Se envio tu informaciónm");
+    Swal.fire("Gracias", "Tu mensaje fue enviado", "success");
   }
 
   setTimeout(() => {

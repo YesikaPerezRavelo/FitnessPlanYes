@@ -69,11 +69,7 @@ function addtocart(a) {
 function delElement(a) {
   cart.splice(a, 1);
   displayCart();
-  Swal.fire({
-    icon: "error",
-    title: "Oops...",
-    text: "Something went wrong!",
-  });
+  Swal.fire("Se ha borrado un elemento de tu carrito");
 }
 
 function displayCart(a) {

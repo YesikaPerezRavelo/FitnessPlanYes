@@ -18,11 +18,7 @@ function message() {
       msg.value = "";
     }, 2000);
 
-    Swal.fire(
-      "Buena decision!",
-      "Has añadido este producto a tu carrito!",
-      "success"
-    );
+    Swal.fire("Gracias", "Tu mensaje fue enviado", "success");
   }
 
   setTimeout(() => {
