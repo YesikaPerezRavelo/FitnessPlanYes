@@ -3,20 +3,23 @@ const contenedor = document.getElementById("root");
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
+    let i = 0;
     data.forEach((product) => {
-      `
+      const card = document.createElement("div");
+
+      card.innerHTML =
+        `
        <div class="card" style="width: 18rem;">
-       <img src="images" class="${Image}" alt="images">
+       <img src="images" class="${product.Image}" alt="images">
        <div class="card" style="width: 18rem;">
        <div class="card-body">
        <h5 class="card-title">${product.title}</h5>
-        <span> precio: ${product.price} <span>
-        <a href="#" class="btn btn-primary">Go somewhere</a>` +
+        <span> precio: ${product.price} <span>` +
         "<button onclick='addtocart(" +
         i++ +
         ")'>Agregar a carrito </button>" +
         `</div>
-      </div>`;
+        </div>`;
       contenedor.append(card);
     });
   });
@@ -45,8 +48,8 @@ function displayCart(a) {
     document.getElementById("cartItem").innerHTML = "Tu carrito esta vacio";
     document.getElementById("total").innerHTML = "" + 0 + ".00";
   } else {
-    document.getElementById("cartItem").innerHTML = cart.map((items) => {
-      var { Image, title, price } = items;
+    document.getElementById("cartItem").innerHTML = cart.map((product) => {
+      var { Image, title, price } = product;
       total = total + price;
       document.getElementById("total").innerHTML = "" + total + ".00";
       return (
