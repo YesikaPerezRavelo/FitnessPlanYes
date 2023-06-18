@@ -1,63 +1,30 @@
-const product = [
-  {
-    id: 0,
-    Image: "../img/abs.jpg",
-    title: "Abs de hierro",
-    price: 8000,
-  },
-  {
-    id: 1,
-    Image: "../img/upper.jpg",
-    title: "Brazos",
-    price: 9000,
-  },
-  {
-    id: 2,
-    Image: "../img/home.jpg",
-    title: "Entrena en casa",
-    price: 1000,
-  },
-  {
-    id: 3,
-    Image: "../img/sexy.jpg",
-    title: "Cola y piernas",
-    price: 9000,
-  },
-];
+const contenedor = document.getElementById("root");
 
-const categories = [
-  ...new Set(
-    product.map((item) => {
-      return item;
-    })
-  ),
-];
-let i = 0;
-
-document.getElementById("root").innerHTML = categories
-  .map((item) => {
-    var { Image, title, price } = item;
-    return (
-      `<div class='box'>
-    <div class='img/logo.webp'>
-    <img class='images' src=${Image}></img>
-    </div>
-    <div class='bottom'>
-    <p>${title}</p>
-    <h2>${price}.00</h2>` +
-      "<button onclick='addtocart(" +
-      i++ +
-      ")'>Agregar a carrito </button>" +
-      `</div>
-    </div>`
-    );
-  })
-  .join("");
-
-var cart = [];
+fetch("../data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((product) => {
+      const card = document.createElement("div");
+      div.innerHTML =
+        `
+       <div class="card" style="width: 18rem;">
+       <img src="images" class="${Image}" alt="images">
+       <div class="card" style="width: 18rem;">
+       <div class="card-body">
+       <h5 class="card-title">${product.title}</h5>
+        <span> precio: ${product.price} <span>
+        <a href="#" class="btn btn-primary">Go somewhere</a>` +
+        "<button onclick='addtocart(" +
+        i++ +
+        ")'>Agregar a carrito </button>" +
+        `</div>
+      </div>`;
+      contenedor.append(card);
+    });
+  });
 
 function addtocart(a) {
-  cart.push({ ...categories[a] });
+  cart.push({ ...product[a] });
   displayCart();
   Swal.fire(
     "Buena decision!",
@@ -80,23 +47,21 @@ function displayCart(a) {
     document.getElementById("cartItem").innerHTML = "Tu carrito esta vacio";
     document.getElementById("total").innerHTML = "" + 0 + ".00";
   } else {
-    document.getElementById("cartItem").innerHTML = cart
-      .map((items) => {
-        var { Image, title, price } = items;
-        total = total + price;
-        document.getElementById("total").innerHTML = "" + total + ".00";
-        return (
-          `
+    document.getElementById("cartItem").innerHTML = cart.map((items) => {
+      var { Image, title, price } = items;
+      total = total + price;
+      document.getElementById("total").innerHTML = "" + total + ".00";
+      return (
+        `
                 <div class='d-flex justify-content-between'> 
                 <img class= 'rowimg' src=${Image}>
                 
                 <p style='font-size:20px'> ${title}</p> 
                 <h2 style='font-size:20px'>${price}.00</h2>` +
-          "<i class = 'fa-solid fa-trash' onclick= 'delElement (" +
-          j++ +
-          ")'></i></div>"
-        );
-      })
-      .join("");
+        "<i class = 'fa-solid fa-trash' onclick= 'delElement (" +
+        j++ +
+        ")'></i></div>"
+      );
+    });
   }
 }
