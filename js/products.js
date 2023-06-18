@@ -4,9 +4,7 @@ fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((product) => {
-      const card = document.createElement("div");
-      div.innerHTML =
-        `
+      `
        <div class="card" style="width: 18rem;">
        <img src="images" class="${Image}" alt="images">
        <div class="card" style="width: 18rem;">
