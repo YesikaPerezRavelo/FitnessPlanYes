@@ -354,7 +354,7 @@ button {
 .event {
   font-size: 10px;
   padding: 3px;
-  background-color: #58bae4;
+  background-color: black;
   color: white;
   border-radius: 5px;
   max-height: 55px;
@@ -388,9 +388,6 @@ button {
   outline: none;
   border: none;
   box-shadow: 0px 0px 3px gray;
-}
-#eventTitleInput.error {
-  border: 2px solid red;
 }
 #cancelButton,
 #deleteButton {
@@ -489,19 +486,4 @@ button {
   margin-bottom: 60px;
   display: flex;
   justify-content: center;
-}
-.message .success {
-  font-size: 20px;
-  color: green;
-  position: absolute;
-  animation: buttons 0.3s linear;
-  display: none;
-}
-.message .danger {
-  font-size: 20px;
-  color: red;
-  position: absolute;
-  transition: 0.3s;
-  animation: buttons 0.3s linear;
-  display: none;
 }

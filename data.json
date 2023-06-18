@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "Image": "../img/abs.jpg",
+    "title": "Abs de hierro",
+    "price": 8000
+  },
+  {
+    "id": 1,
+    "Image": "../img/upper.jpg",
+    "title": "Brazos",
+    "price": 9000
+  },
+  {
+    "id": 2,
+    "Image": "../img/home.jpg",
+    "title": "Entrena en casa",
+    "price": 1000
+  },
+  {
+    "id": 3,
+    "Image": "../img/sexy.jpg",
+    "title": "Cola y piernas",
+    "price": 9000
+  }
+]

@@ -111,7 +111,11 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
-    Swal.fire("Buena decision!", "Perfecto", "success");
+    Swal.fire(
+      "En los días buenos, ¡entrena!",
+      "En los días malos, ¡Entrena más duro!",
+      "A MOVERSE"
+    );
 
     localStorage.setItem("events", JSON.stringify(events));
     closeModal();
@@ -122,11 +126,7 @@ function saveEvent() {
 
 function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
-  Swal.fire({
-    icon: "error",
-    title: "Oops...",
-    text: "Something went wrong!",
-  });
+  Swal.fire("Has borrado tu reserva");
   localStorage.setItem("events", JSON.stringify(events));
   closeModal();
 }
