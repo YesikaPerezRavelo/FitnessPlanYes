@@ -26,6 +26,8 @@ fetch("../data.json")
     });
   });
 
+const cart = [];
+
 function addtocart(a) {
   cart.push(products[a]);
   displayCart();
