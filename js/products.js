@@ -33,6 +33,7 @@ function addtocart(a) {
     "success"
   );
 }
+var cart = [];
 
 function delElement(a) {
   cart.splice(a, 1);
