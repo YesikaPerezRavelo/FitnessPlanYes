@@ -40,7 +40,7 @@ document.getElementById("root").innerHTML = categories
     return (
       `<div class='box'>
       <div class='img/logo.webp'>
-      <img class='images' src=${Image}></img>
+      <img class='Image' src=${Image}></img>
       </div>
       <div class='bottom'>
       <p>${title}</p>

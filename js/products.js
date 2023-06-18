@@ -12,7 +12,7 @@ fetch("../data.json")
       card.innerHTML =
         `
        <div class="card" style="width: 18rem;">
-       <img src="images" class="${product.Image}" alt="images">
+       <img src="Image" class="${product.Image}" alt="Image">
        <div class="card" style="width: 18rem;">
        <div class="card-body">
        <h5 class="card-title">${product.title}</h5>
