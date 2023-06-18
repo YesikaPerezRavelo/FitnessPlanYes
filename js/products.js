@@ -33,7 +33,7 @@ function addtocart(a) {
     "success"
   );
 }
-var cart = [];
+const cart = [];
 
 function delElement(a) {
   cart.splice(a, 1);
