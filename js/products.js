@@ -1,10 +1,12 @@
 const contenedor = document.getElementById("root");
+const products = [];
 
 fetch("../data.json")
   .then((res) => res.json())
   .then((data) => {
     let i = 0;
     data.forEach((product) => {
+      products.push(product);
       const card = document.createElement("div");
 
       card.innerHTML =
@@ -25,7 +27,7 @@ fetch("../data.json")
   });
 
 function addtocart(a) {
-  cart.push({ ...product[a] });
+  cart.push(products[a]);
   displayCart();
   Swal.fire(
     "Buena decision!",
@@ -33,7 +35,6 @@ function addtocart(a) {
     "success"
   );
 }
-const cart = [];
 
 function delElement(a) {
   cart.splice(a, 1);
