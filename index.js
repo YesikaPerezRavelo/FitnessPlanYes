@@ -25,7 +25,17 @@ function registro() {
       password.value = "";
     }, 2000);
 
-    Swal.fire("Gracias", "Tu mensaje fue enviado", "success");
+    Swal.fire({
+      title: "Bienvenido",
+      text: "Tu registro ha sido exitoso!",
+      imageUrl: "img/a.webp",
+      imageWidth: "25%",
+      html: '<a href="pages/appointment.html" class="sweetAlertButton">Enviar</a>',
+      padding: "1rem",
+      showConfirmButton: false,
+      showCloseButton: "true",
+      showCancelButton: false,
+    });
   }
 
   setTimeout(() => {

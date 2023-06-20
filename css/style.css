@@ -55,6 +55,17 @@ body {
   border-radius: 8px;
 }
 
+div:where(.swal2-container) .swal2-html-container {
+  width: 70%;
+  font-family: "Montserrat", sans-serif;
+  font: white;
+  background-color: #d78383;
+  border: none;
+  border-radius: 8px;
+  margin-left: 15%;
+  padding: 10px;
+}
+
 #form button:hover {
   background-color: rgb(10, 3, 3);
 }
@@ -107,23 +118,23 @@ body {
 /* carrito */
 .cart {
   display: flex;
-  background-color: rgb(238, 41, 162);
+  background-color: #d78383;
   align-items: center;
-  padding: 7px 10px;
-  border-radius: 3px;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
 
 .fa-solid {
-  color: rgb(92, 9, 74);
+  color: black;
   padding: 0.4rem;
 }
 
 .cart p {
   height: 30px;
   width: 30px;
-  border-radius: 20px;
+  border-radius: 35px;
   background-color: rgb(255, 255, 255);
-  color: rgb(92, 9, 74);
+  color: black;
   font-weight: 300;
   padding-top: 0.1rem;
   font-family: "Montserrat", sans-serif;
@@ -205,7 +216,7 @@ h2 {
 }
 
 button:hover {
-  background-color: rgb(238, 41, 162);
+  background-color: black;
 }
 
 .resume {
@@ -251,7 +262,7 @@ button {
   margin-top: 10px;
   width: 100%;
   color: white;
-  background-color: rgb(41, 57, 194);
+  background-color: #d78383;
   border: none;
   border-radius: 8px;
 }
@@ -340,7 +351,7 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(117, 117, 117);
   margin: 5px;
   box-shadow: 0px 0px 3px #54658b;
   display: flex;
