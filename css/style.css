@@ -1,5 +1,6 @@
 body {
   background: none;
+  color: black;
 }
 
 #intro-section {
@@ -31,9 +32,10 @@ body {
   width: 300px;
   margin: 10vh auto 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: #bd5454;
   border-radius: 8px;
   font-size: 12px;
+  height: 28rem;
 }
 
 #form h1 {
@@ -48,13 +50,13 @@ body {
   margin-top: 10px;
   width: 100%;
   color: white;
-  background-color: rgb(41, 57, 194);
+  background-color: #d78383;
   border: none;
   border-radius: 8px;
 }
 
 #form button:hover {
-  background-color: rgb(238, 41, 162);
+  background-color: rgb(10, 3, 3);
 }
 
 .input-control {
@@ -256,9 +258,9 @@ button {
 
 #header {
   padding: 10px;
-  color: rgb(238, 41, 162);
+  color: #bd5454;
   font-size: 26px;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: space-between;
 }
@@ -267,14 +269,14 @@ button {
   margin-top: 10px;
   width: 80%;
   color: white;
-  background-color: rgb(41, 57, 194);
+  background-color: #d78383;
   border: none;
   border-radius: 8px;
   font-size: medium;
 }
 
 #header button:hover {
-  background-color: rgb(238, 41, 162);
+  background-color: black;
 }
 
 #container {
@@ -317,8 +319,9 @@ button {
 #weekdays {
   width: 100%;
   display: flex;
-  color: #247ba0;
+  color: rgb(44, 44, 44);
   justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
 }
 #weekdays div {
   width: 100px;
@@ -337,7 +340,7 @@ button {
   height: 100px;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: #a7b5f1;
+  background-color: rgb(39, 39, 39);
   margin: 5px;
   box-shadow: 0px 0px 3px #54658b;
   display: flex;
@@ -345,24 +348,24 @@ button {
   justify-content: space-between;
 }
 .day:hover {
-  background-color: rgb(135, 174, 247);
+  background-color: #d78383;
 }
 
 .day + #currentDay {
-  background-color: #f8afe6;
+  background-color: #d78383;
 }
 .event {
   font-size: 10px;
   padding: 3px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   border-radius: 5px;
   max-height: 55px;
   overflow: hidden;
 }
 .padding {
   cursor: default !important;
-  background-color: #fffcff !important;
+  background-color: white !important;
   box-shadow: none !important;
 }
 #newEventModal,
@@ -370,7 +373,7 @@ button {
   display: none;
   z-index: 20;
   padding: 25px;
-  background-color: #e8f4fa;
+  background-color: white;
   box-shadow: 0px 0px 3px black;
   border-radius: 5px;
   width: 350px;
@@ -391,11 +394,11 @@ button {
 }
 #cancelButton,
 #deleteButton {
-  background-color: #d36c6c;
+  background-color: #d78383;
 }
 #saveButton,
 #closeButton {
-  background-color: #92a1d1;
+  background-color: black;
 }
 #eventText {
   font-size: 14px;
