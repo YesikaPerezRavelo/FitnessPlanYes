@@ -9,6 +9,8 @@ const newEventModal = document.getElementById("newEventModal");
 const deleteEventModal = document.getElementById("deleteEventModal");
 const backDrop = document.getElementById("modalBackDrop");
 const eventTitleInput = document.getElementById("eventTitleInput");
+
+// solo lee en ingles los días de la semana //
 const weekdays = [
   "Sunday",
   "Monday",
@@ -56,6 +58,7 @@ function load() {
   });
   const paddingDays = weekdays.indexOf(dateString.split(", ")[0]);
 
+  // el mes si me aparece en español
   document.getElementById("monthDisplay").innerText = `${dt.toLocaleDateString(
     "es-us",
     { month: "long" }
@@ -111,11 +114,12 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
-    Swal.fire(
-      "En los días buenos, ¡entrena!",
-      "En los días malos, ¡Entrena más duro!",
-      "A MOVERSE"
-    );
+    Swal.fire({
+      title: "Excelente elección, ¡FELICITACIONES!",
+      imageUrl: "../img/g.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
+    });
 
     localStorage.setItem("events", JSON.stringify(events));
     closeModal();
@@ -126,7 +130,12 @@ function saveEvent() {
 
 function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
-  Swal.fire("Has borrado tu reserva");
+  Swal.fire({
+    title: "¿Que pasó?",
+    imageUrl: "../img/h.webp",
+    imageWidth: "25%",
+    showCloseButton: "true",
+  });
   localStorage.setItem("events", JSON.stringify(events));
   closeModal();
 }

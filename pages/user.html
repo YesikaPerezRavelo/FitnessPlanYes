@@ -18,7 +18,7 @@
 
     <!-- CCS Style -->
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!-- Google fonts -->
     <link
@@ -26,7 +26,7 @@
           rel="stylesheet"
         />
 
-
+ 
 
     <title>FitnessPlanYes</title>
   </head>
@@ -35,8 +35,8 @@
         <nav class="navbar navbar-expand-lg">
           <div class="container">
             <div class="logo">
-              <a href="index.html">
-                <img src="img/Logo.webp" alt="Logo" />
+              <a href="../index.html">
+                <img src="../img/Logo.webp" alt="Logo" />
               </a>
             </div>
             <button
@@ -53,67 +53,78 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active text-danger px-3" aria-current="page" href="index.html"
-                    >Registro</a>
+                  <a class="nav-link px-3" href="../index.html">Registro</a>
                 </li>
+
+                
 
                 <li class="nav-item">
-                  <a class="nav-link px-3" href="pages/appointment.html">Reserva tu clase</a>
-                </li>
+                    <a class="nav-link px-3" href="../pages/appointment.html">Reserva tu clase</a>
+                  </li>
 
-              <li class="nav-item">
-                <a class="nav-link px-3" href="pages/products.html"
-                  >Productos</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link px-3" aria-current="page" href="../pages/user.html"
-                  >Usuario</a>
-              </li>
-                  <a class="nav-link px-3" href="pages/contact.html">Contacto</a>
+                <li class="nav-item">
+                  <a class="nav-link px-3" aria-current="page" href="../pages/products.html"
+                    >Productos</a>
                 </li>
-
+                
+                <li class="nav-item">
+                    <a class="nav-link active text-danger px-3" aria-current="page" href="../pages/user.html"
+                      >Usuario</a>
+                  </li>
+            
+                <li class="nav-item">
+                  <a class="nav-link px-3" href="../pages/contact.html">Contacto</a>
+                </li>
+                
           </div>
         </nav>
       </header>
-
-<section id="intro-section">
-      <div class="container">
-        <form id="form" action="/">
-            <h1>Sign Up</h1>
-            <div class="input-control">
-                <label for="username">Usuario</label>
-                <input id="username" placeholder="Nombre" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="email">Email</label>
-                <input id="email" placeholder="email" type="text">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password">Password</label>
-                <input id="password"placeholder="password" type="password">
-                <div class="error"></div>
-            </div>
-            <div class="input-control">
-                <label for="password2">Repetir password</label>
-                <input id="password2"placeholder="password" type="password">
-                <div class="error"></div>
-            </div>
-            <button type="submit" id="send" class="btn">Enviar</button>
-            
-            </div>
-        </form>
+  
+<!-- Selección -->
+<div class="container">
+    <h2><i class="fa-solid fa-user"></i>¡hola! ¿Como estas? ¡Entrenemos hoy!</h2>
+    <body>
+        
+    </body>
+    <div class="row">
+      <div class="col">
+        <figure class="figure">
+            <img src="../img/home.jpg" class="figure-img img-fluid rounded" alt="...">
+            <p>Conocer nuestros productos</p>
+            <div class="button">
+              <button id="send">Ir a productos</button>
+          </div>
+          </figure>
+          
+      </div>
+      <div class="col">
+        <figure class="figure">
+            <img src="../img/calendar.png" class="figure-img img-fluid rounded" alt="...">
+            <p>No te quedes sin entrenar agenda tu clase</p>
+            <div class="button">
+              <button id="send">Agendar entrenamiento</button>
+          </div>
+          </figure>
+      </div>
+      <div class="col">
+        <figure class="figure">
+            <img src="../img/imc.png" class="figure-img img-fluid rounded" alt="...">
+            <p>Es para determinar si estas dentro del peso normal</p>
+            <div class="button">
+              <button id="send">Conocer tu IMC</button>
+          </div>
+          </figure>
+      </div>
     </div>
-</section>
+  </div>
+
+   
+
 <!-- Footer -->
-
-
-
+ 
   <!-- Copyright -->
   <div class="text-center p-4">
-    © 2023 Copyright:
+    © 2023 Copyright: 
     <a class="text-reset fw-bold" href="">Yesika Perez Ravelo  </a>
     <a href="" class="me-4 link-secondary">
         <i class="fab fa-facebook-f"></i>
@@ -127,19 +138,18 @@
       <a href="" class="me-4 link-secondary">
         <i class="fab fa-linkedin"></i>
       </a>
-
-
+   
+      
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer End-->
 
-
 <!-- JS -->
-<script src="./index.js"></script>
+<script src="../js/products.js"></script>
 
-       <!-- SweetAlert -->
-       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Bootstrap -->
     <script
@@ -147,7 +157,5 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-
- 
   </body>
 </html>

@@ -142,10 +142,10 @@ div:where(.swal2-container) .swal2-html-container {
 }
 
 #root {
-  width: 100%;
-  display: grid;
   grid-gap: 20px;
   padding-top: 2rem;
+  display: flex;
+  padding-left: 2rem;
 }
 
 .sidebar {
@@ -500,4 +500,15 @@ button {
   margin-bottom: 60px;
   display: flex;
   justify-content: center;
+}
+
+/* user */
+
+.figure-img {
+  max-height: 400px;
+}
+
+.figure {
+  max-width: 335px;
+  margin-top: 2rem;
 }

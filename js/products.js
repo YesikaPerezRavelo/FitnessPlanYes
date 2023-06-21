@@ -31,17 +31,21 @@ const cart = [];
 function addtocart(a) {
   cart.push(products[a]);
   displayCart();
-  Swal.fire(
-    "Buena decision!",
-    "Has añadido este producto a tu carrito!",
-    "success"
-  );
+  Swal.fire({
+    title: "¡Buena elección!",
+    imageUrl: "../img/i.webp",
+    imageWidth: "25%",
+  });
 }
 
 function delElement(a) {
   cart.splice(a, 1);
   displayCart();
-  Swal.fire("Se ha borrado un elemento de tu carrito");
+  Swal.fire({
+    title: "¡Borraste un elemento!",
+    imageUrl: "../img/d.webp",
+    imageWidth: "25%",
+  });
 }
 
 function displayCart(a) {

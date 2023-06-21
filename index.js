@@ -14,9 +14,10 @@ function registro() {
     password2 === ""
   ) {
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Falta información",
+      title: "¡Falta información",
+      imageUrl: "img/j.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
     });
   } else {
     setTimeout(() => {
@@ -27,10 +28,9 @@ function registro() {
 
     Swal.fire({
       title: "Bienvenido",
-      text: "Tu registro ha sido exitoso!",
       imageUrl: "img/a.webp",
       imageWidth: "25%",
-      html: '<a href="pages/appointment.html" class="sweetAlertButton">Enviar</a>',
+      html: '<a href="pages/user.html" class="sweetAlertButton">Enviar</a>',
       padding: "1rem",
       showConfirmButton: false,
       showCloseButton: "true",

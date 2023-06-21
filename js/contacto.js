@@ -20,9 +20,4 @@ function message() {
 
     Swal.fire("Gracias", "Tu mensaje fue enviado", "success");
   }
-
-  setTimeout(() => {
-    danger.style.display = "none";
-    success.style.display = "none";
-  }, 4000);
 }
