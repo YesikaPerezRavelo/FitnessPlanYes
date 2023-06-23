@@ -1,6 +1,6 @@
 (async () => {
-  await document.getElementById("imc").addEventListener("click", function () {
-    const { value: peso } = Swal.fire({
+  await document.getElementById("imc").addEventListener("click", async function datosIMC() {
+    let {value:weight}= await Swal.fire({
       position: "center",
       title: "Conozcamos tu IMC",
       text: "¿Cuanto pesas?",
@@ -8,14 +8,59 @@
       inputPlaceholder: "peso",
       inputValue: "",
       inputOptions: {
-        40: "40kg",
-        50: "50kg",
-        60: "60kg",
-      },
+        curenta: "40kg",
+          cincuenta: "50kg",
+          sesenta: "60kg",
+      }
     });
+
+    let {value:height}= await Swal.fire({
+      position: "center",
+      title: "Estatura",
+      text: "Ingresa tu estatura en metros (EJEMPLO: 1.63)",
+      input: "select",
+      inputPlaceholder: "peso",
+      inputValue: "",
+      inputOptions: {
+        unmetrosesenta: "1.60",
+          unmetrosetenta: "1.70",
+          unmetroochenta: "1.80",
+
+
+      }
+
   });
 
-  if (peso) {
-    alert("hola");
+
+  let alCuadrado = altura * altura;
+  let IMC = peso / alCuadrado;
+
+
+ await Swal.fire({
+    position: "center",
+    title: "Estatura",
+    text: "Calcularemos tu índice de Masa Corporal, escribe OK para continuar",
+    
+  });
+ 
+
+  if (IMC < 18.5) {
+    alert("Estás por debajo del peso apropiado");
+  } else if (IMC <= 24.9) {
+    alert("Eres saludable");
+  } else if (IMC <= 29.9) {
+    alert("Tienes sobrepeso");
+  } else if (IMC <= 34.9) {
+    alert("Tienes obesidad tipo 1");
+  } else if (IMC <= 39.9) {
+    alert("Tienes obesidad tipo 2");
+  } else if (IMC >= 40) {
+    alert("Tienes obesidad tipo 3");
+  } else {
+    alert("Puede que no ingresaste un dato o ingresaste un dato inválido");
   }
-})();
+}
+
+
+})datosIMC(),
+
