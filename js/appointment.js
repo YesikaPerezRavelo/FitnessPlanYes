@@ -10,7 +10,6 @@ const deleteEventModal = document.getElementById("deleteEventModal");
 const backDrop = document.getElementById("modalBackDrop");
 const eventTitleInput = document.getElementById("eventTitleInput");
 
-// solo lee en ingles los días de la semana //
 const weekdays = [
   "Sunday",
   "Monday",
@@ -58,7 +57,6 @@ function load() {
   });
   const paddingDays = weekdays.indexOf(dateString.split(", ")[0]);
 
-  // el mes si me aparece en español
   document.getElementById("monthDisplay").innerText = `${dt.toLocaleDateString(
     "es-us",
     { month: "long" }
