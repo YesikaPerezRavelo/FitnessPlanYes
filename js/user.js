@@ -1,6 +1,6 @@
 (async () => {
   await document.getElementById("imc").addEventListener("click", async function datosIMC() {
-    let {value:weight}= await Swal.fire({
+    let {value:peso}= await Swal.fire({
       position: "center",
       title: "Conozcamos tu IMC",
       text: "¿Cuanto pesas?",
@@ -14,12 +14,12 @@
       }
     });
 
-    let {value:height}= await Swal.fire({
+    let {value:altura}= await Swal.fire({
       position: "center",
       title: "Estatura",
       text: "Ingresa tu estatura en metros (EJEMPLO: 1.63)",
       input: "select",
-      inputPlaceholder: "peso",
+      inputPlaceholder: "altura",
       inputValue: "",
       inputOptions: {
         unmetrosesenta: "1.60",
