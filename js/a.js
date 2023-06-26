@@ -1,58 +1,3 @@
-const trenInferior = document.getElementById("trenInferior");
-trenInferior.addEventListener("click", function (e) {
-  Swal.fire({
-    title: "Tren Inferior",
-    text: "El tren inferior es la parte de abajo de nuestro cuerpo. Los entrenamientos del tren inferior se utilizan para fortalecer piernas, muslos y glúteos",
-    imageUrl: "../img/lower.png",
-    imageWidth: "25%",
-    showCloseButton: "true",
-  });
-});
-
-const trenSuperior = document.getElementById("trenSuperior");
-trenSuperior.addEventListener("click", function (e) {
-  Swal.fire({
-    title: "Tren Superior",
-    text: "El tren superior es la parte de arriba de nuestro cuerpo, es decir desde los abdominales para arriba. Estos entrenamientos te trabajan los tríceps, bíceps, Pectorales, abdominales, deltoides, dorsales, oblicuos entre otros",
-    imageUrl: "../img/up.png",
-    imageWidth: "25%",
-    showCloseButton: "true",
-  });
-});
-
-const zonaMedia = document.getElementById("zonaMedia");
-zonaMedia.addEventListener("click", function (e) {
-  Swal.fire({
-    title: "Zona Media",
-    text: "Core también conocido como zona media, incluye todos los musculos de la región central del cuerpo. Recto del abdomen, transverso del abdomen",
-    imageUrl: "../img/zonamedia.png",
-    imageWidth: "25%",
-    showCloseButton: "true",
-  });
-});
-
-const fullbody = document.getElementById("fullbody");
-fullbody.addEventListener("click", function (e) {
-  Swal.fire({
-    title: "Full body",
-    text: "Es un entrenamiento que te trabaja todo el cuerpo, tren inferior, tren superior y zona media",
-    imageUrl: "../img/fullbody.png",
-    imageWidth: "25%",
-    showCloseButton: "true",
-  });
-});
-
-const aerobico = document.getElementById("aerobico");
-aerobico.addEventListener("click", function (e) {
-  Swal.fire({
-    title: "Aerobico",
-    text: "Incrementa el consumo de oxígeno y aumenta el ritmo de la respiración y de la frecuencia cardíaca. Este tipo de entrenamiento es importante para ayudar a mantener nuestro corazón, pulmones y sistema circulatorio sano.",
-    imageUrl: "../img/fullbody.png",
-    imageWidth: "25%",
-    showCloseButton: "true",
-  });
-});
-
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem("events")
@@ -160,6 +105,14 @@ function closeModal() {
 }
 
 function saveEvent() {
+  class Agenda {
+    constructor(time, day, disponibility) {
+      this.time = time;
+      this.day = day;
+      this.disponibility = disponibility;
+    }
+  }
+
   if (eventTitleInput.value) {
     eventTitleInput.classList.remove("error");
 
@@ -167,18 +120,35 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
-    Swal.fire({
-      title: "Excelente elección, ¡FELICITACIONES!",
-      text: "En breve nos comunicaremos con vos",
-      imageUrl: "../img/g.webp",
-      imageWidth: "25%",
-      showCloseButton: "true",
-    });
 
-    localStorage.setItem("events", JSON.stringify(events));
-    closeModal();
-  } else {
-    eventTitleInput.classList.add("error");
+    available(time);
+    {
+      return (time >= 8 && time <= 12) || (time >= 15 && time <= 19);
+    }
+  }
+
+  const agenda1 = new Agenda();
+
+  for (let index = 1; index <= 1; index++) {
+    let entry = parseInt(
+      Swal.fire(
+        "Ingresa un horario en el que te gustaría entrenar conmigo ejemplo 16"
+      )
+    );
+
+    if (agenda1.available(entry)) {
+      events.push({
+        date: clicked,
+        title: eventTitleInput.value,
+      });
+
+      localStorage.setItem("events", JSON.stringify(events));
+      closeModal();
+
+      Swal.fire("Este horario esta disponible");
+    } else {
+      Swal.fire("Este horario no esta disponible");
+    }
   }
 }
 
@@ -186,7 +156,7 @@ function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
   Swal.fire({
     title: "¿Que pasó?",
-    text: "Recuerda que entrenar no te beneficia sólo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud",
+    text: "Recuerda que entrenar no te beneficia sólo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud física y mental",
     imageUrl: "../img/h.webp",
     imageWidth: "25%",
     showCloseButton: "true",

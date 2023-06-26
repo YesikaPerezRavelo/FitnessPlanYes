@@ -30,7 +30,7 @@ function registro() {
       title: "Bienvenido",
       imageUrl: "img/a.webp",
       imageWidth: "25%",
-      html: '<a href="pages/user.html" class="sweetAlertButton">Enviar</a>',
+      html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="pages/user.html" class="sweetAlertButton">Enviar registro</a></span></dd>',
       padding: "1rem",
       showConfirmButton: false,
       showCloseButton: "true",
