@@ -5,7 +5,7 @@ trenInferior.addEventListener("click", function (e) {
     text: "El tren inferior es la parte de abajo de nuestro cuerpo. Los entrenamientos del tren inferior se utilizan para fortalecer piernas, muslos y glúteos",
     imageUrl: "../img/lower.png",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
 });
 
@@ -16,7 +16,7 @@ trenSuperior.addEventListener("click", function (e) {
     text: "El tren superior es la parte de arriba de nuestro cuerpo, es decir desde los abdominales para arriba. Estos entrenamientos te trabajan los tríceps, bíceps, Pectorales, abdominales, deltoides, dorsales, oblicuos entre otros",
     imageUrl: "../img/up.png",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
 });
 
@@ -27,7 +27,7 @@ zonaMedia.addEventListener("click", function (e) {
     text: "Core también conocido como zona media, incluye todos los musculos de la región central del cuerpo. Recto del abdomen, transverso del abdomen",
     imageUrl: "../img/zonamedia.png",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
 });
 
@@ -38,7 +38,7 @@ fullbody.addEventListener("click", function (e) {
     text: "Es un entrenamiento que te trabaja todo el cuerpo, tren inferior, tren superior y zona media",
     imageUrl: "../img/fullbody.png",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
 });
 
@@ -49,7 +49,7 @@ aerobico.addEventListener("click", function (e) {
     text: "Incrementa el consumo de oxígeno y aumenta el ritmo de la respiración y de la frecuencia cardíaca. Este tipo de entrenamiento es importante para ayudar a mantener nuestro corazón, pulmones y sistema circulatorio sano.",
     imageUrl: "../img/fullbody.png",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
 });
 
@@ -100,7 +100,6 @@ function load() {
   const day = dt.getDate();
   const month = dt.getMonth();
   const year = dt.getFullYear();
-
   const firstDayOfMonth = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -160,14 +159,6 @@ function closeModal() {
 }
 
 async function saveEvent() {
-  class Agenda {
-    constructor(time, day, disponibility) {
-      this.time = time;
-      this.day = day;
-      this.disponibility = disponibility;
-    }
-  }
-
   if (eventTitleInput.value) {
     eventTitleInput.classList.remove("error");
 
@@ -176,45 +167,23 @@ async function saveEvent() {
       title: eventTitleInput.value,
     });
 
-    available(time);
-    {
-      return (time >= 8 && time <= 12) || (time >= 15 && time <= 19);
-    }
-  }
+    localStorage.setItem("events", JSON.stringify(events));
+    closeModal();
 
-  const agenda1 = new Agenda();
-
-  for (let index = 1; index <= 1; index++) {
-    let entry = parseInt(
-      await Swal.fire(
-        "Ingresa un horario en el que te gustaría entrenar conmigo ejemplo 16"
-      )
-    );
-
-    if (agenda1.available(entry)) {
-      events.push({
-        date: clicked,
-        title: eventTitleInput.value,
-      });
-
-      localStorage.setItem("events", JSON.stringify(events));
-      closeModal();
-
-      await Swal.fire("Este horario esta disponible");
-    } else {
-      await Swal.fire("Este horario no esta disponible");
-    }
+    await Swal.fire("Evento guardado correctamente");
+  } else {
+    eventTitleInput.classList.add("error");
   }
 }
 
 function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
   Swal.fire({
-    title: "¿Que pasó?",
-    text: "Recuerda que entrenar no te beneficia sólo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud",
+    title: "¿Qué pasó?",
+    text: "Recuerda que entrenar no te beneficia solo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud",
     imageUrl: "../img/h.webp",
     imageWidth: "25%",
-    showCloseButton: "true",
+    showCloseButton: true,
   });
   localStorage.setItem("events", JSON.stringify(events));
   closeModal();
@@ -236,7 +205,6 @@ function initButtons() {
   document
     .getElementById("deleteButton")
     .addEventListener("click", deleteEvent);
-  document.getElementById("closeButton").addEventListener("click", closeModal);
 }
 
 initButtons();

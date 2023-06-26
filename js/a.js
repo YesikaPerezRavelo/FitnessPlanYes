@@ -104,7 +104,7 @@ function closeModal() {
   load();
 }
 
-function saveEvent() {
+async function saveEvent() {
   class Agenda {
     constructor(time, day, disponibility) {
       this.time = time;
@@ -131,7 +131,7 @@ function saveEvent() {
 
   for (let index = 1; index <= 1; index++) {
     let entry = parseInt(
-      Swal.fire(
+      await Swal.fire(
         "Ingresa un horario en el que te gustaría entrenar conmigo ejemplo 16"
       )
     );
@@ -145,9 +145,9 @@ function saveEvent() {
       localStorage.setItem("events", JSON.stringify(events));
       closeModal();
 
-      Swal.fire("Este horario esta disponible");
+      await Swal.fire("Este horario esta disponible");
     } else {
-      Swal.fire("Este horario no esta disponible");
+      await Swal.fire("Este horario no esta disponible");
     }
   }
 }
