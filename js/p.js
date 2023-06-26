@@ -104,19 +104,7 @@ function closeModal() {
   load();
 }
 
-
-
-let reservaTimeCount = 0;
 function saveEvent() {
-
-    class Agenda {
-        constructor(time, day, disponibility) {
-          this.time = time;
-          this.day = day;
-          this.propietario = disponibility;
-        }}
-
-
   if (eventTitleInput.value) {
     eventTitleInput.classList.remove("error");
 
@@ -124,51 +112,26 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
+    Swal.fire({
+      title: "Excelente elección, ¡FELICITACIONES!",
+      text: "En breve nos comunicaremos con vos",
+      imageUrl: "../img/g.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
+    });
 
-    available(time); {
-        return (hora >= 8 && hora <= 12) || (hora >= 15 && hora <= 19);
-      }
-    }
-
-    const agenda1 = new Agenda();
-
-  for (let index = 1; index <= 1; index++) {
-    let entry = parseInt(
-      prompt(
-        "Ingresa un horario en el que te gustaría entrenar con nosotros y te diremos si tenemos disponibilidad horaria. Horario Militar, ejemplo 16"
-      )
-    );
-    if (agenda1.available(entry)) {
-      alert("Este horario está disponible: " + entry);
-    } else {
-      alert("Este horario no está disponible: " + entry);
-    }
-  }
-
-  reserveTimeCount++;
-  if (reservaHorariaCount >= 3) {
-    alert("Ya has realizado el máximo de reservas horarias permitidas");
-  } else {
-    events.push({
-        date: clicked,
-        title: eventTitleInput.value,
-      });
-    alert("Reserva: " + newTime.reserve);
-  }
-  
-  localStorage.setItem("events", JSON.stringify(events));
+    localStorage.setItem("events", JSON.stringify(events));
     closeModal();
-  
-
-
-    
-
+  } else {
+    eventTitleInput.classList.add("error");
+  }
+}
 
 function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
   Swal.fire({
     title: "¿Que pasó?",
-    text: "Recuerda que entrenar no te beneficia sólo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud física y mental",
+    text: "Recuerda que entrenar no te beneficia sólo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud",
     imageUrl: "../img/h.webp",
     imageWidth: "25%",
     showCloseButton: "true",
@@ -198,17 +161,3 @@ function initButtons() {
 
 initButtons();
 load();
-
-
-
-
-
-
-
-
-
-
-
-
-
-

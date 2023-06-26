@@ -159,7 +159,15 @@ function closeModal() {
   load();
 }
 
-function saveEvent() {
+async function saveEvent() {
+  class Agenda {
+    constructor(time, day, disponibility) {
+      this.time = time;
+      this.day = day;
+      this.disponibility = disponibility;
+    }
+  }
+
   if (eventTitleInput.value) {
     eventTitleInput.classList.remove("error");
 
@@ -167,18 +175,35 @@ function saveEvent() {
       date: clicked,
       title: eventTitleInput.value,
     });
-    Swal.fire({
-      title: "Excelente elección, ¡FELICITACIONES!",
-      text: "En breve nos comunicaremos con vos",
-      imageUrl: "../img/g.webp",
-      imageWidth: "25%",
-      showCloseButton: "true",
-    });
 
-    localStorage.setItem("events", JSON.stringify(events));
-    closeModal();
-  } else {
-    eventTitleInput.classList.add("error");
+    available(time);
+    {
+      return (time >= 8 && time <= 12) || (time >= 15 && time <= 19);
+    }
+  }
+
+  const agenda1 = new Agenda();
+
+  for (let index = 1; index <= 1; index++) {
+    let entry = parseInt(
+      await Swal.fire(
+        "Ingresa un horario en el que te gustaría entrenar conmigo ejemplo 16"
+      )
+    );
+
+    if (agenda1.available(entry)) {
+      events.push({
+        date: clicked,
+        title: eventTitleInput.value,
+      });
+
+      localStorage.setItem("events", JSON.stringify(events));
+      closeModal();
+
+      await Swal.fire("Este horario esta disponible");
+    } else {
+      await Swal.fire("Este horario no esta disponible");
+    }
   }
 }
 
