@@ -7,9 +7,10 @@ function message() {
 
   if (Name.value === "" || email.value === "" || msg.value === "") {
     Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "Falta información",
+      title: "¡Falta información",
+      imageUrl: "../img/j.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
     });
   } else {
     setTimeout(() => {
@@ -18,6 +19,11 @@ function message() {
       msg.value = "";
     }, 2000);
 
-    Swal.fire("Gracias", "Tu mensaje fue enviado", "success");
+    Swal.fire({
+      title: "¡Mensaje enviado!",
+      imageUrl: "../img/a.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
+    });
   }
 }

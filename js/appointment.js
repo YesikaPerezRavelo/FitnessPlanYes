@@ -170,7 +170,13 @@ async function saveEvent() {
     localStorage.setItem("events", JSON.stringify(events));
     closeModal();
 
-    await Swal.fire("Evento guardado correctamente");
+    await Swal.fire({
+      title: "¡Clase agendada!",
+      text: "FELICITACIONES",
+      imageUrl: "../img/a.webp",
+      imageWidth: "25%",
+      showCloseButton: "true",
+    });
   } else {
     eventTitleInput.classList.add("error");
   }
