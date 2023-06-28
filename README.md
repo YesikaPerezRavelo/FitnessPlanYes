@@ -297,4 +297,4 @@ alert("¡Gracias por tu compra!");
 
 [LinkedIn](https://www.linkedin.com/in/yesikaperezravelo/)
 
-![imagenPerfil](./yes.webp)
+![imagenPerfil](../img/Logo.webp)
