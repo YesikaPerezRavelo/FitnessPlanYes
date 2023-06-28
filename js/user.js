@@ -33,7 +33,7 @@
       if (IMC < 18.5) {
         await Swal.fire({
           position: "center",
-          title: "Estás por debajo del peso apropiado, tranqui yo te ayudare",
+          title: "Estás por debajo del peso apropiado, ¡TRANQUI YO TE AYUDARE!",
           imageUrl: "../img/d.webp",
           imageWidth: "25%",
           html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
@@ -49,7 +49,7 @@
       } else if (IMC <= 29.9) {
         await Swal.fire({
           position: "center",
-          title: "Tienes sobrepeso, tranqui yo te ayudare",
+          title: "Tienes sobrepeso, ¡TRANQUI YO TE AYUDARE!",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
           html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
@@ -57,7 +57,7 @@
       } else if (IMC <= 34.9) {
         await Swal.fire({
           position: "center",
-          title: "Tienes obesidad tipo 1, tranqui yo te ayudare",
+          title: "Tienes obesidad tipo 1, ¡TRANQUI YO TE AYUDARE!",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
           html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
@@ -65,7 +65,7 @@
       } else if (IMC <= 39.9) {
         await Swal.fire({
           position: "center",
-          title: "Tienes obesidad tipo 2, tranqui yo te ayudare",
+          title: "Tienes obesidad tipo 2, ¡TRANQUI YO TE AYUDARE!",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
           html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
@@ -73,7 +73,7 @@
       } else if (IMC >= 40) {
         await Swal.fire({
           position: "center",
-          title: "Tienes obesidad tipo 3, tranqui yo te ayudare",
+          title: "Tienes obesidad tipo 3, ¡TRANQUI YO TE AYUDARE!",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
           html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',

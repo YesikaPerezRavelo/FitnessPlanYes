@@ -14,7 +14,7 @@ function registro() {
     password2 === ""
   ) {
     Swal.fire({
-      title: "¡Falta información",
+      title: "¡Falta información!",
       imageUrl: "img/j.webp",
       imageWidth: "25%",
       showCloseButton: "true",

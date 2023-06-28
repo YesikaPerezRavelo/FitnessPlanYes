@@ -210,7 +210,7 @@ function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
   Swal.fire({
     title: "¿Qué pasó?",
-    text: "Recuerda que entrenar no solo te hace sentir bien fisicamente. Entrenar es tiempo para ti, que dedicas para liberar estrés, malos rollos y ganar en salud física, mental y espiritual",
+    text: "Recuerda que entrenar no solo te hace sentir bien fisicamente. Entrenar es tiempo para ti, que dedicas para liberar estrés, malos rollos y ganar salud física, mental y espiritual",
     imageUrl: "../img/h.webp",
     imageWidth: "25%",
     showCloseButton: true,
