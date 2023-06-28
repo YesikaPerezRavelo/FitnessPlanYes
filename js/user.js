@@ -27,56 +27,56 @@
       await Swal.fire({
         position: "center",
         title: "IMC",
-        text: "Calcularemos tu índice de Masa Corporal,OK para continuar",
+        text: "Calcularemos tu índice de Masa Corporal, OK para continuar",
       });
 
       if (IMC < 18.5) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
-          imageUrl: "img/d.webp",
+          title: "Estás por debajo del peso apropiado, tranqui yo te ayudare",
+          imageUrl: "../img/d.webp",
           imageWidth: "25%",
-          text: "Estás por debajo del peso apropiado",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else if (IMC <= 24.9) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
+          title: "Eres saludable",
           imageUrl: "../img/i.webp",
           imageWidth: "25%",
-          text: "Eres saludable",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else if (IMC <= 29.9) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
+          title: "Tienes sobrepeso, tranqui yo te ayudare",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
-          text: "Tienes sobrepeso, tranqui yo te ayudare",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else if (IMC <= 34.9) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
+          title: "Tienes obesidad tipo 1, tranqui yo te ayudare",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
-          text: "Tienes obesidad tipo 1, tranqui yo te ayudare",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else if (IMC <= 39.9) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
+          title: "Tienes obesidad tipo 2, tranqui yo te ayudare",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
-          text: "Tienes obesidad tipo 2, tranqui yo te ayudare",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else if (IMC >= 40) {
         await Swal.fire({
           position: "center",
-          title: "IMC",
+          title: "Tienes obesidad tipo 3, tranqui yo te ayudare",
           imageUrl: "../img/f.webp",
           imageWidth: "25%",
-          text: "Tienes obesidad tipo 3, tranqui yo te ayudare",
+          html: '<dd class="text-dark lead my-4"><span class="text fw"><a href="../pages/appointment.html" class="sweetAlertButton">Agendar una clase</a></span></dd>',
         });
       } else {
         await Swal.fire({

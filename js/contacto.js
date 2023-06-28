@@ -7,7 +7,7 @@ function message() {
 
   if (Name.value === "" || email.value === "" || msg.value === "") {
     Swal.fire({
-      title: "¡Falta información",
+      title: "¡Falta información!",
       imageUrl: "../img/j.webp",
       imageWidth: "25%",
       showCloseButton: "true",

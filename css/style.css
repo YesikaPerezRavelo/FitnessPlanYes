@@ -35,7 +35,7 @@ body {
   background-position: center;
   border: 20rem;
   background-size: 90%;
-  padding: 4rem 0rem 10rem 0rem;
+  padding: 4rem 0rem 0rem 0rem;
 }
 
 @media (max-width: 500px) {
@@ -155,7 +155,7 @@ body {
 }
 
 .fa-solid {
-  color: white;
+  color: black;
   padding: 0.4rem;
 }
 
@@ -316,6 +316,7 @@ button:hover {
   flex-wrap: wrap;
   margin-bottom: 4rem;
   margin: auto;
+  margin-top: -8rem;
 }
 
 .workout-container {
@@ -604,7 +605,7 @@ button {
 }
 
 .container3 h2 {
-  color: white;
+  color: black;
 }
 
 @media (max-width: 700px) {

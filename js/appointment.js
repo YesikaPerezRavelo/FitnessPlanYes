@@ -169,13 +169,37 @@ async function saveEvent() {
 
     localStorage.setItem("events", JSON.stringify(events));
     closeModal();
+    let { value: horario } = await Swal.fire({
+      title: "¡Muy buena opción!",
+      text: "Ahora elige un horario",
+      showCloseButton: "true",
+      input: "select",
+      inputPlaceholder: "horario",
+      inputValue: "",
+      inputOptions: {
+        seven: "07:00am",
+        eight: "08:00am",
+        nine: "09:00am",
+        ten: "10:00am",
+        eleven: "11:00am",
+        twelve: "12:00pm",
+        thirteen: "01:00pm",
+        fourteen: "02:00pm",
+        fifteen: "03:00pm",
+        sixteen: "04:00pm",
+        seventeen: "05:00pm",
+        eighteen: "06:00pm",
+        nineteen: "07:00pm",
+        twenty: "08:00pm",
+      },
+    });
 
     await Swal.fire({
-      title: "¡Clase agendada!",
-      text: "FELICITACIONES",
+      position: "center",
       imageUrl: "../img/a.webp",
       imageWidth: "25%",
-      showCloseButton: "true",
+      title: "Felicitaciónes",
+      text: "¡Clase agendada!",
     });
   } else {
     eventTitleInput.classList.add("error");
@@ -186,7 +210,7 @@ function deleteEvent() {
   events = events.filter((e) => e.date !== clicked);
   Swal.fire({
     title: "¿Qué pasó?",
-    text: "Recuerda que entrenar no te beneficia solo a nivel físico, es un espacio de tiempo para ti que dedicas para liberar estrés, malos rollos y ganar en salud",
+    text: "Recuerda que entrenar no solo te hace sentir bien fisicamente. Entrenar es tiempo para ti, que dedicas para liberar estrés, malos rollos y ganar en salud física, mental y espiritual",
     imageUrl: "../img/h.webp",
     imageWidth: "25%",
     showCloseButton: true,
