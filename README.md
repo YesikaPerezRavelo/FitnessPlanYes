@@ -1,8 +1,4 @@
-# Fitness Plan
-
-## Javascrip
-
-### Portfolio
+# Front-end e-commerce \*\*
 
 #### Website to sale fitness workut plans and storage a service
 
@@ -49,10 +45,12 @@ datosIMC();
 4. Buy our fitness workout plans
 5. Send us any question or concern
 
-| Name   | Last Name    | Email              |
-| ------ | ------------ | ------------------ |
-| Yesika | Perez Ravelo | yesikapr@gmail.com |
+---
+
+| Name   | Last Name | Email              |
+| ------ | --------- | ------------------ |
+| Yesika | Perez     | yesikapr@gmail.com |
 
 [LinkedIn](https://www.linkedin.com/in/yesikaperezravelo/)
 
-![imagenPerfil](./img/yes.png)
+![imagenPerfil](https://firebasestorage.googleapis.com/v0/b/productyesfitness.appspot.com/o/fitnessProducts.png?alt=media&token=673220bd-90ca-46d0-bb5e-fc13a54f5ac7)
