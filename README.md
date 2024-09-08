@@ -6,7 +6,10 @@
 
 **Ultimate health and fitness goals**
 
-Website to break down your ultimate health and fitness goals into small, specific and achievable mini-goals! Let´s find out what´s your IMC and let´s workout!
+An e-commerce application using **HTML** and **JavaScript**. This project includes a dynamic **Body Mass Index (BMI) calculator** implemented with JavaScript. The application utilizes **SweetAlert** to provide interactive, user-friendly prompts and responses.
+
+This project integrates core JavaScript functionalities with front-end design to create a practical tool for users seeking fitness-related guidance.
+
 
 _Roof draft_
 
